@@ -11,16 +11,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //variables
         variables()
-
+        //funciones
+        println("********FUNCIONES**************")
         println(suma(3, 4))
 
         resta(6, 3)
 
         //clases abstractas
+        println("*********CLASES ABSTRACTAS***********")
         val avion=Avion(1200, "seat")
         avion.arrancar()
         avion.detener()
+
+        println("********ARRAYS**************")
+
+        Arrays()
 
     }
 
@@ -35,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val num2 = 3L  // se asigna como Long
         val palabra: String = "hola"
 
-        data class persona(val nombre: String) {}  //data class usada para ejemplo
+        data class persona(val nombre: String) {}  //data class usada para ejemplo, tiene que tener al menos un constructor
 
         val nombrePersona = persona("pedro")
 
@@ -101,6 +108,12 @@ class MainActivity : AppCompatActivity() {
         protected  lateinit var  marca :String
 
         fun arrancar(){  // Esta función la heredaría las clase que hereden de transporte
+         // si quisiera modificar esta funcion en las clases hinjas tendria que añadir open:
+
+         // open fun arrancar()......
+         // también se usa el open para hacer que una clase puede ser heredada por otras
+            //open class Avion{........}
+            // class Avinoneta: Avion{.......}
             println("El Transporte está arrancando")
         }
         abstract fun detener() // Esta función la deberán implementar las clases que hereden de transporte
@@ -115,4 +128,45 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    // *********ARRAYS****************
+
+    // tenemos la clase Array y tenemos diferentes formas de inicializarlos:
+    /*
+      1 -- val pares = Array<Int>(10) {i -> (i+1) * 2}     Usa indice, necesita instanciación
+      2 -- var semana = arrayOf<String>("Lunes", "Martes".....)   No usa Indice , iniciamos array con datos
+      3 -- var colores = arrayOfNulls<String>      Crea un array de nulos
+     */
+    fun Arrays(){
+        // 1
+        val numeros = Array<String>(5){
+            "Numero: $it"  //  el it corresponde al iterador por defecto que va aumentando en cada vuelta
+        }
+
+        // tb se puede personalizar el it
+        val numeros2 = Array<String>(5){num -> "Prueba segunda Numero: ${num+1}"}
+        for(i in numeros){
+            println(i)
+        }
+        for(i in numeros2){
+            println(i)
+        }
+
+        //2
+        val colores = arrayOf("Rojo", "Azul", "Amarillo") // inicialización obligatoria
+
+        for(i in colores){println(i)}
+        //3
+
+        val todoSePuede = arrayOfNulls<Int>(5) // podemos llenarlo más tarde
+        for(i in todoSePuede){println(i)}
+
+        todoSePuede[0]= 23
+        todoSePuede[1]= 25
+        for(i in todoSePuede){println(i)}
+
+    }
+
+
 }
