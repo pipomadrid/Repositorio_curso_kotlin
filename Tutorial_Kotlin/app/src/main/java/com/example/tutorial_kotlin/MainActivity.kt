@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         resta(6, 3)
 
+        //clases abstractas
+        val avion=Avion(1200, "seat")
+        avion.arrancar()
+        avion.detener()
 
     }
 
@@ -88,5 +92,27 @@ class MainActivity : AppCompatActivity() {
     private fun resta(num1: Int, num2: Int) { // no devuelve nada
         println(num1 - num2)
     }
+// ************CLASES ABSTRACTAS**************
 
+    // Funcionamiento parecido Java
+
+    abstract class Transporte{
+        protected  var capacidad: Int=0
+        protected  lateinit var  marca :String
+
+        fun arrancar(){  // Esta función la heredaría las clase que hereden de transporte
+            println("El Transporte está arrancando")
+        }
+        abstract fun detener() // Esta función la deberán implementar las clases que hereden de transporte
+
+    }
+
+    class Avion : Transporte {
+        constructor(capacidad:Int, marca:String)
+
+        override fun detener() {
+            println("El Avión se está deteniendo")
+        }
+
+    }
 }
