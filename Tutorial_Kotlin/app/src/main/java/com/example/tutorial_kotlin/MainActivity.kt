@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         println("********ARRAYS**************")
 
-        Arrays()
+        arrays()
+
+        listas()
 
     }
 
@@ -138,7 +140,7 @@ class MainActivity : AppCompatActivity() {
       2 -- var semana = arrayOf<String>("Lunes", "Martes".....)   No usa Indice , iniciamos array con datos
       3 -- var colores = arrayOfNulls<String>      Crea un array de nulos
      */
-    fun Arrays(){
+    fun arrays(){
         // 1
         val numeros = Array<String>(5){
             "Numero: $it"  //  el it corresponde al iterador por defecto que va aumentando en cada vuelta
@@ -167,6 +169,37 @@ class MainActivity : AppCompatActivity() {
         for(i in todoSePuede){println(i)}
 
     }
+
+    //************LISTAS************************
+    // muy util cuando no sabemos el tamaño que vamos a necesitar
+    // hay list y MutableList--> List no se puede modificar, MutableList si.
+
+     fun listas(){
+         println("*************LISTAS*************")
+         // listas inmutables
+         val colores = listOf("Rojo", "Azul", "Verde", null) // tamaño inmutable, solo lectura
+         for (i in colores){println(i)}
+
+         val ejemplo = listOfNotNull(null, "Pedro") //comprueba si hay valores nulos y los descarta
+
+         // lista mutable
+
+         val lista= mutableListOf<String>("pedro", "juan","felipe")
+
+         lista[0]="Sara"
+         lista.add("pepito")
+         for(i in 0 until lista.-size) {println(lista.get(i))}  // otra forma de hacer el bucle
+
+         lista.forEach{println(it)}   // otra forma de hacer el for, usa el it como iterador
+
+         lista.forEachIndexed { index, s ->     // esta forma nos facilita el uso de el indice y asi evitartener que declarar una variable
+             println("la posicion ${index+1} pertenece a $s" )
+
+         }
+
+     }
+
+
 
 
 }
