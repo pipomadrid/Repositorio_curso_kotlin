@@ -1,10 +1,11 @@
-package com.example.tutorial_kotlin
+package com.example.tutorial_kotlin.basesKotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.tutorial_kotlin.R
 
-class MainActivity : AppCompatActivity() {
+class BasesKotlin : AppCompatActivity() {
     lateinit var miVariable: String // usada como ejemplo *E1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         //clases abstractas
         println("*********CLASES ABSTRACTAS***********")
-        val avion=Avion(1200, "seat")
+        val avion= Avion(1200, "seat")
         avion.arrancar()
         avion.detener()
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         listas()
 
+        mapas()
     }
 
     private fun variables() {
@@ -174,32 +176,69 @@ class MainActivity : AppCompatActivity() {
     // muy util cuando no sabemos el tamaño que vamos a necesitar
     // hay list y MutableList--> List no se puede modificar, MutableList si.
 
-     fun listas(){
+     fun listas() {
          println("*************LISTAS*************")
          // listas inmutables
          val colores = listOf("Rojo", "Azul", "Verde", null) // tamaño inmutable, solo lectura
-         for (i in colores){println(i)}
+         for (i in colores) {
+             println(i)
+         }
 
          val ejemplo = listOfNotNull(null, "Pedro") //comprueba si hay valores nulos y los descarta
 
          // lista mutable
 
-         val lista= mutableListOf<String>("pedro", "juan","felipe")
+         val lista = mutableListOf<String>("pedro", "juan", "felipe")
 
-         lista[0]="Sara"
+         lista[0] = "Sara"
          lista.add("pepito")
-         for(i in 0 until lista.-size) {println(lista.get(i))}  // otra forma de hacer el bucle
+         for (i in 0 until lista.size) {
+             println(lista.get(i))
+         }  // otra forma de hacer el bucle
 
-         lista.forEach{println(it)}   // otra forma de hacer el for, usa el it como iterador
+         lista.forEach { println(it) }   // otra forma de hacer el for, usa el it como iterador
 
          lista.forEachIndexed { index, s ->     // esta forma nos facilita el uso de el indice y asi evitartener que declarar una variable
-             println("la posicion ${index+1} pertenece a $s" )
+             println("la posicion ${index + 1} pertenece a $s")
 
          }
-
      }
 
 
+         fun mapas(){
+
+             // es una estructura para guardar datos
+             // optimizada para insertar y recuperar pero no apra recorrer de principio a fin
+             // cada valor está identificado mediante un atributo, no se pueden repetir
+             // es como un diccionario real, la clave y valor pueden ser de cualquier tipo
+             // cada item del mapa estácompuesto por una Entry<K,V>
+             // existen Map y MutableMap
+
+            data class Planeta(val pos:Int, val nombre: String, val habitable: Boolean){
+                override fun toString(): String {
+                    return "Planeta(Posición : $pos, nombre : $nombre , ¿es habitable?: ${
+                        if (habitable) "SI"
+                        else "NO"
+                    })"
+                }
+
+            }
+             val mercurio = Planeta(1,"Mercurio",false)
+             val venus = Planeta(2,"Venus",false)
+             val tierra = Planeta(3,"Tierra",true)
+             val marte = Planeta(4,"Marte",false)
+
+             val planetas = mutableMapOf<String,Planeta>()
+             planetas.put("mercurio",mercurio)
+             planetas.put("venus",venus)
+             println(planetas.get("mercurio"))
+
+             val planetasInt = mapOf<String,List<Planeta>>( // mapa donde el valor es una lista de planetas
+                     "interiores" to listOf(mercurio, venus, tierra,marte)
+             )
+             println(planetasInt.get("interiores"))
+
+         }
 
 
 }
