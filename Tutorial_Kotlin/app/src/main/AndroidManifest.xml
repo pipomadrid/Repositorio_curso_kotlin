@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tutorial_kotlin" >
+    package="com.example.tutorial_kotlin">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
     <application
         android:allowBackup="true"
@@ -8,17 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tutorial_Kotlin" >
-        <activity android:name=".ejercicios1.MainActivity2" >
-        </activity>
-        <activity android:name=".ejercicios1.MainActivity" >
+        android:theme="@style/Base.MyTheme">
+        <activity android:name=".Envio_Datos_Activities.MainActivity2"></activity>
+        <activity android:name=".Envio_Datos_Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basesKotlin.BasesKotlin" >
+        <activity android:name=".Ciclo_Vida_Intent.MainActivity2" />
+        <activity android:name=".Ciclo_Vida_Intent.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".basesKotlin.BasesKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

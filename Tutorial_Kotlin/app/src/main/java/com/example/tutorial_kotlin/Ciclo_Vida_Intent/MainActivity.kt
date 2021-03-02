@@ -1,4 +1,4 @@
-package com.example.tutorial_kotlin.ejercicios1
+package com.example.tutorial_kotlin.Ciclo_Vida_Intent
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
