@@ -2,6 +2,7 @@ package com.example.tutorial_kotlin.ejercicios1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tutorial_kotlin.R
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
