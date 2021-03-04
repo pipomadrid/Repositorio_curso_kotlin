@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EjercicioClase7</string>
+    <string name="forgot_password">¿has olvidado la contraseña?</string>
+    <string name="main_registro">Registro</string>
+    <string name="main_login">Iniciar sesión</string>
+    <string name="error_blank_password">¡la contraseña no puede estar vacía!</string>
+    <string name="error_blank_username">¡El usuario no puede estar vacío!</string>
+    <string name="main_password">Contraseña</string>
+    <string name="main_nombre_usuario">Nombre de usuario</string>
 </resources>

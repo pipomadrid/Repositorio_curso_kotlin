@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Homework7</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="main_registro">Register</string>
+    <string name="main_login">Sign in</string>
+    <string name="error_blank_password">The password can´t be empty</string>
+    <string name="error_blank_username">The user can´t be empty</string>
+    <string name="main_password">Password</string>
+    <string name="main_nombre_usuario">User name</string>
+</resources>
