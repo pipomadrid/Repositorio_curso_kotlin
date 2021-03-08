@@ -2,17 +2,54 @@ package com.example.ejercicioclase7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.widget.addTextChangedListener
 import com.example.ejercicioclase7.databinding.ActivityMainBinding
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding //usamos para vincular elementos del layout con el código
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setTheme(R.style.Base_MyTheme) // nos pone el tema base de nuestra app
         //usamos para vincular elementos del layout con el código
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view=binding.root
         setContentView(view)
+
+        binding.mainTiePassword.setOnFocusChangeListener{ _, hasFocus ->  // Al  coger el foco , resetea el error
+            if(hasFocus){
+                binding.mainTilPassword.error = ""
+            }
+
+        }
+
+        //Esta función controla la introducción del texto, al escribir texto comprueba el tamaño y si es mas de 5 elimina el error
+        binding.mainTiePassword.addTextChangedListener {
+            val size = it!!.length   // devuelve el tamaño del  it que devuelve la función
+            if(size<5) {
+                binding.mainTilPassword.error = "Carácteres $size/5"
+            }
+            else{
+
+                binding.mainTilPassword.error = ""
+            }
+
+
+        }
+        // Con esta función comprobamos el password al hacer click en el Tie
+        binding.mainTiePassword.setOnClickListener {
+            val textInput = it as TextInputEditText
+            val size = textInput.text!!.toString().length
+            if(size<5) {
+                binding.mainTilPassword.error = "Carácteres $size/5"
+            }
+            else{
+
+                binding.mainTilPassword.error = ""
+            }
+        }
+
 
         binding.mainBtLogin.setOnClickListener{
             if(binding.mainTiePassword.text.isNullOrBlank()){ // Comprobamos que en el edit text del password no esté vacio

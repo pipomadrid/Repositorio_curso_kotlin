@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item>
+    <shape>
+        <gradient
+            android:angle="270"
+            android:startColor="@color/color_secundary"
+            android:endColor="@color/color_surface"/>
+
+    </shape>
+
+</item>
+    <item>
+        <bitmap android:src="@drawable/ic_logo" />
+
+    </item>
+
+</layer-list>

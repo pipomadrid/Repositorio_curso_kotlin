@@ -1,5 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+    <!--SplashScreen-->
+    <style name="Splash" parent = "Base.MyTheme">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <!-- Status bar-->
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- booleano que nos indica si el fondo es ocsuro false o si es claro-->
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Navigation bar-->
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
     <style name="Base.MyTheme" parent="Base.MaterialThemeBuilder">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_primary</item>
