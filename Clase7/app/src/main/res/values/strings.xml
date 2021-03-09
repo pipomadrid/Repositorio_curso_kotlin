@@ -7,4 +7,10 @@
     <string name="error_blank_username">¡El usuario no puede estar vacío!</string>
     <string name="main_password">Contraseña</string>
     <string name="main_nombre_usuario">Nombre de usuario</string>
+    <string name="nombre_registro">Introduzca el nombre</string>
+    <string name="email_registro">Introduzca el email</string>
+    <string name="contraseña_registro">Introduzca la contraseña</string>
+    <string name="rep_contraseña_registro">Repita la contraseña</string>
+    <string name="btn_cancelar">CANCELAR</string>
+    <string name="btn_registrar">REGISTRAR</string>
 </resources>

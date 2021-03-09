@@ -117,6 +117,7 @@
      app:hintTextColor="@color/color_secundary"
      >
   <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/main_tie_user"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:inputType="textEmailAddress"

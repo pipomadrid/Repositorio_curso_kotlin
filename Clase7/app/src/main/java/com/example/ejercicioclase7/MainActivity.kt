@@ -1,5 +1,7 @@
 package com.example.ejercicioclase7
 
+import android.app.ActivityOptions
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.widget.addTextChangedListener
@@ -62,7 +64,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.mainBtRegistro.setOnClickListener {
-
+        val intent= Intent(this,Activity2::class.java)
+            startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
 
         }
 

@@ -8,4 +8,10 @@
     <string name="error_blank_username">The user can´t be empty</string>
     <string name="main_password">Password</string>
     <string name="main_nombre_usuario">User name</string>
+    <string name="nombre_registro">Write your name</string>
+    <string name="email_registro">Write your email</string>
+    <string name="contraseña_registro">Enter your password</string>
+    <string name="rep_contraseña_registro">Repeat password</string>
+    <string name="btn_cancelar">CANCEL</string>
+    <string name="btn_registrar">REGISTER</string>
 </resources>
