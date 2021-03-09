@@ -75,8 +75,8 @@
             android:id="@+id/activity2TieEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:nextFocusDown="@id/activity2TieContra"
             android:imeOptions="actionNext"
+            android:nextFocusDown="@id/activity2TieContra"
             android:inputType="textEmailAddress"
             />
     </com.google.android.material.textfield.TextInputLayout>
