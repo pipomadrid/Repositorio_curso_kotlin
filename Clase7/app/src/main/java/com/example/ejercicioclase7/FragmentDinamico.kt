@@ -5,53 +5,60 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ejercicioclase7.databinding.FragmentDinamicoBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val PRIMERO: String = "nombre"
+private const val SEGUNDO :String = "imagen"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentDinamico.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentDinamico : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentDinamicoBinding
+
+    private lateinit var primero: String
+    private lateinit var segundo: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+        arguments.let {
+            primero = it!!.getString(NOMBRE)!!
+            segundo = it.getString(IMAGEN)!!
+
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dinamico, container, false)
+        binding =  FragmentDinamicoBinding.inflate(layoutInflater)
+        val view = binding.root
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentDinamico.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                FragmentDinamico().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
+                /* fun newInstance(nombre: String, imagen: String) =
+                         PlanetaFragment().apply { //AÑADEME INFORMACIÓN
+                             //AÑADE ARGUMENTOS QUE SE PODRÁN USAR EN EL FRAGMENTO
+                             arguments = Bundle().apply { //AÑADAME INFORMACIÓN AL ARGUMENTS
+                                 //MAPA STRING, V
+                                 putString(NOMBRE, nombre)
+                                 putString(IMAGEN, imagen)
+                             }
+                         }*/
+
+        fun newInstance(primero: String, segundo: String) =
+                FragmentDinamico().apply { //AÑADEME INFORMACIÓN
+                    //AÑADE ARGUMENTOS QUE SE PODRÁN USAR EN EL FRAGMENTO
+                    arguments = Bundle().apply { //AÑADAME INFORMACIÓN AL ARGUMENTS
+                        //MAPA STRING, V
+                        putString(PRIMERO, primero)
+                        putString(SEGUNDO, segundo)
                     }
                 }
+
+
     }
 }
