@@ -72,10 +72,11 @@ class Activity2 : AppCompatActivity() {
 
         // El ime se define en el xml del layout , repetircontra está a la escucha y cuando recibe el IME
         // adecuado realiza la acción que le indiquemos
+        // con el actionId comprobamos que accion estamos recibiendo
         repetirContra.setOnEditorActionListener { v, actionId, event ->
             if(actionId == EditorInfo.IME_ACTION_DONE){
-                binding.activity2BtnRegistrar.performClick()
-                true
+                binding.activity2BtnRegistrar.performClick() // simula el click sobre el botón indicado
+                true // tenemos que devolver booleano pero no lo usamos
             }
             false
         }
@@ -132,7 +133,8 @@ class Activity2 : AppCompatActivity() {
         }
     }
 
- // función que relizamos para escribir menos código 
+ // función que relizamos para escribir menos código , extendemos la funcionalidad de la clase TextinputEditText
+    //  se llaman extensions
     fun TextInputEditText.obtenerTexto():String{
 
         return text.toString()

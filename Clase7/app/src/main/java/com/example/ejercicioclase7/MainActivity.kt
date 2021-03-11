@@ -61,6 +61,9 @@ class MainActivity : AppCompatActivity() {
                 binding.mainTilPassword.error="" // si no está vacio, eliminamos el mensaje de error
                 binding.mainTilPassword.refreshErrorIconDrawableState() //quita el estado de error
             }
+
+            val intent= Intent(this,PlanetaActivity::class.java)
+                startActivity(intent)
         }
 
         binding.mainBtRegistro.setOnClickListener {
