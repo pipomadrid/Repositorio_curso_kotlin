@@ -1,11 +1,11 @@
-package com.example.ejercicioclase7
+package com.example.ejercicioclase7.ui.Planeta
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ejercicioclase7.databinding.ActivityPlanetaBinding
 
-class PlanetaActivity : AppCompatActivity(), PlanetaFragment.PlanetaListener{
+class PlanetaActivity : AppCompatActivity(), PlanetaFragment.PlanetaListener {
 
 
     private lateinit var binding :ActivityPlanetaBinding

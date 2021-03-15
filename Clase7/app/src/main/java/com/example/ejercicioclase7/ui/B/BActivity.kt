@@ -1,15 +1,17 @@
 package com.example.ejercicioclase7.ui.B
 
 import android.os.Bundle
-import android.support.wearable.activity.WearableActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.example.ejercicioclase7.databinding.ActivityABinding
 
-class BActivity : WearableActivity() {
 
+class BActivity : AppCompatActivity() {
+    private lateinit var Binding: ActivityABinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_b)
-
-        // Enables Always-on
-        setAmbientEnabled()
+        Binding = ActivityABinding.inflate(layoutInflater)
+        val view = Binding.root
+        setContentView(view)
     }
+
 }

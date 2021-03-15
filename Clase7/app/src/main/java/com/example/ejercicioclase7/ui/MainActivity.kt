@@ -1,10 +1,11 @@
-package com.example.ejercicioclase7
+package com.example.ejercicioclase7.ui
 
 import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.widget.addTextChangedListener
+import com.example.ejercicioclase7.R
 import com.example.ejercicioclase7.databinding.ActivityMainBinding
 import com.example.ejercicioclase7.ui.Planeta.PlanetaActivity
 import com.google.android.material.textfield.TextInputEditText
@@ -68,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.mainBtRegistro.setOnClickListener {
-        val intent= Intent(this,Activity2::class.java)
+        val intent= Intent(this, Activity2::class.java)
             startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
 
         }

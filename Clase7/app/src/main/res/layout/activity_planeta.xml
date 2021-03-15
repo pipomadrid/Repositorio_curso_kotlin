@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlanetaActivity">
+    tools:context=".ui.Planeta.PlanetaActivity">
 
     <LinearLayout
         android:id="@+id/planeta_ll"
@@ -19,14 +19,14 @@
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.example.ejercicioclase7.PlanetaFragment"
+        android:name="com.example.ejercicioclase7.ui.Planeta.PlanetaFragment"
         tools:layout="@layout/fragment_planeta"/>
 
         <fragment
             android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="com.example.ejercicioclase7.PlanetaFragment"
+            android:name="com.example.ejercicioclase7.ui.Planeta.PlanetaFragment"
             tools:layout="@layout/fragment_planeta"/>
         <TextView
             android:id="@+id/textview"

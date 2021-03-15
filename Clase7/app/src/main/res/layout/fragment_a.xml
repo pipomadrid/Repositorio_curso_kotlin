@@ -5,10 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.A.AFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+         <com.google.android.material.button.MaterialButton
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="BOTON 1"
+             android:layout_margin="5dp"/>
+
+         <com.google.android.material.button.MaterialButton
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="BOTON 2"
+             android:layout_margin="5dp"/>
+         <com.google.android.material.button.MaterialButton
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="BOTON 3"
+             android:layout_margin="5dp"/>
+         <com.google.android.material.button.MaterialButton
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="BOTON 4"
+             android:layout_margin="5dp"/>
+
+         
+
+    </LinearLayout>
+
+</ScrollView>
 
 </FrameLayout>

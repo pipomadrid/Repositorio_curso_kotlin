@@ -1,4 +1,4 @@
-package com.example.ejercicioclase7
+package com.example.ejercicioclase7.ui.Planeta
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

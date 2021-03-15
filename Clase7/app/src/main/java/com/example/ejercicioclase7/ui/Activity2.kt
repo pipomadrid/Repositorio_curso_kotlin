@@ -1,9 +1,10 @@
-package com.example.ejercicioclase7
+package com.example.ejercicioclase7.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
+import com.example.ejercicioclase7.R
 import com.example.ejercicioclase7.databinding.Activity2Binding
 import com.google.android.material.textfield.TextInputEditText
 

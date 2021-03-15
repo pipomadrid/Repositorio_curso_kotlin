@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ejercicioclase7">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +13,33 @@
         android:roundIcon="@mipmap/ic_miapp"
         android:supportsRtl="true"
         android:theme="@style/Base.MyTheme">
-        <activity android:name=".Activity3"></activity>
-        <activity android:name=".PlanetaActivity" />
-        <activity android:name=".Activity2" />
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.B.BActivity"
+            android:label="@string/title_activity_b">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.A.AActivity" />
+        <activity android:name=".ui.Planeta.Activity3" />
+        <activity android:name=".ui.Planeta.PlanetaActivity" />
+        <activity android:name=".ui.Activity2" />
+        <activity
+            android:name=".ui.MainActivity"
             android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

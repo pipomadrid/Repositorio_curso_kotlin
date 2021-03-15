@@ -1,4 +1,4 @@
-package com.example.ejercicioclase7
+package com.example.ejercicioclase7.ui.Planeta
 
 import android.content.Context
 import android.os.Bundle
@@ -15,7 +15,7 @@ val IMAGEN = "imagen"
 class PlanetaFragment : Fragment() {
 
     //3- Crear variable de tipo listener
-    var listener:PlanetaListener?=null
+    var listener: PlanetaListener?=null
 
     private lateinit var binding:FragmentPlanetaBinding
     private lateinit var nombre:String
