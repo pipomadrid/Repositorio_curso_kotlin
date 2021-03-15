@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.widget.addTextChangedListener
 import com.example.ejercicioclase7.databinding.ActivityMainBinding
+import com.example.ejercicioclase7.ui.Planeta.PlanetaActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 binding.mainTilPassword.refreshErrorIconDrawableState() //quita el estado de error
             }
 
-            val intent= Intent(this,PlanetaActivity::class.java)
+            val intent= Intent(this, PlanetaActivity::class.java)
                 startActivity(intent)
         }
 

@@ -23,6 +23,7 @@ class Activity3 : AppCompatActivity() {
             val transantion = fragmentManager.beginTransaction()
             val fragment = FragmentDinamico.newInstance("hola","que tal")
             transantion.add(binding.dinamicoLl.id, fragment)
+            transantion.addToBackStack(null) // añadimos el fragment a la pila para poder volver a ella
             transantion.commit()
         }
 
@@ -32,6 +33,7 @@ class Activity3 : AppCompatActivity() {
             val transantion = fragmentManager.beginTransaction()
             val fragment = pruebaFragment.newInstance("hola","que tal")
             transantion.replace(binding.dinamicoLl.id, fragment)
+            transantion.addToBackStack(null) // añadimos el fragment a la pila para poder volver a ella
             transantion.commit()
         }
 
