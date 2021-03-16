@@ -14,4 +14,5 @@
     <string name="rep_contraseña_registro">Repeat password</string>
     <string name="btn_cancelar">CANCEL</string>
     <string name="btn_registrar">REGISTER</string>
+    <string name ="tv_fragment_b">User has pushed boton %1$d </string>
 </resources>
