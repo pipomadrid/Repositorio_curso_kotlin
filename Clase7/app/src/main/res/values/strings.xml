@@ -13,12 +13,11 @@
     <string name="rep_contraseña_registro">Repita la contraseña</string>
     <string name="btn_cancelar">CANCELAR</string>
     <string name="btn_registrar">REGISTRAR</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_b">BActivity</string>
+    <string name ="tv_fragment_b">El usuario ha pulsado el boton : %1$d</string>
+
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
-    <string name="hello_world">Hello Square World!</string>
+
 </resources>

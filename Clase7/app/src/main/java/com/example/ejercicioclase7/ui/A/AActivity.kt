@@ -2,15 +2,14 @@ package com.example.ejercicioclase7.ui.A
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ejercicioclase7.R
-import com.example.ejercicioclase7.databinding.ActivityBBinding
+import com.example.ejercicioclase7.databinding.ActivityABinding
 
 class AActivity : AppCompatActivity() {
 
-    private lateinit var Binding:ActivityBBinding
+    lateinit var Binding: ActivityABinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Binding = ActivityBBinding.inflate(layoutInflater)
+        Binding = ActivityABinding.inflate(layoutInflater)
         val view = Binding.root
         setContentView(view)
     }

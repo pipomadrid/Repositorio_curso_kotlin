@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_grey"
-    android:padding="@dimen/box_inset_layout_padding"
-    tools:context=".ui.B.BActivity"
-    tools:deviceIds="wear">
+    tools:context=".ui.A.AActivity">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:boxedEdges="all">
-
+        android:id="@+id/activity_b_frame_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
         <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
+            android:id="@+id/fragment_b_tv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
-
+            android:text="ACTIVIDAD B"
+            />
     </FrameLayout>
-</androidx.wear.widget.BoxInsetLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
