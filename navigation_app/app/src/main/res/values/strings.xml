@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App De Navegación</string>
+    <!-- FRAGMENT INIT -->
+    <string name="hello_init_fragment">Bienvenidos a esta app creada con Android Studio\nVeremos como funciona el navigation</string>
+    <string name="empezar">Empezar</string>
+
+    <!-- FRAGMENT LOGIN -->
+    <string name="forgot_password">¿Has olvidado la contraseña?</string>
+    <string name="main_registro">¡Registrate!</string>
+    <string name="main_password">Contraseña</string>
+    <string name="main_username">Correo electronico</string>
+    <string name="main_login">¡Iniciar sesión!</string>
+    <string name="error_blank_password">¡La contraseña no puede estar vacia!</string>
+
+
+    <string name="tittle_productos">Productos</string>
+    <string name="tittle_opiniones">Opiniones</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="add_nuevo_producto">Añadir nuevo producto</string>
+
+
+</resources>
