@@ -19,7 +19,8 @@ class InitFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val sharedPrefs = activity?.getPreferences(Context.MODE_PRIVATE)!!
-        val logueado = sharedPrefs.getBoolean("logueado",false)
+        val logueado = sharedPrefs.getBoolean("logueado",false) // para obtener las sharedpreferences tenom que poner el calve y un valor por defecto(false) para evitar los nulos
+        //Si logueado es true nevegaremos a otro fragmento del nav_graph
         if (logueado){
             NavHostFragment.findNavController(this).navigate(R.id.action_to_bottom_nav_graph)
         }

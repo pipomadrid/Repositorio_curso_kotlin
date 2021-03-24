@@ -49,20 +49,11 @@ class ProductosFragment : Fragment() {
         })
 
 
-
-
-
-
         binding.productosFab.setOnClickListener {
             mAdapter.crearProducto(Producto(15L, "Nuevo producto", "Nueva descripción", 345678.0, 2))
         }
 
-
-
-
         return view
-
-
     }
 
     private fun createRecyclerView(productos: List<Producto>) {

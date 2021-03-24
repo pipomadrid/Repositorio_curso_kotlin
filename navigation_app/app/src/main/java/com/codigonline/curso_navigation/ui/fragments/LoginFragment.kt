@@ -82,7 +82,8 @@ class LoginFragment : Fragment() {
                 apply()
             }
 
-           /* val edit = sharedPrefs.edit()
+           /* el with es una simplificación de esto:
+            val edit = sharedPrefs.edit()
             edit.putBoolean("logueado",true)
             edit.apply()*/
 
