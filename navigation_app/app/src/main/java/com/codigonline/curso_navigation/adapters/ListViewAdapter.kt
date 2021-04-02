@@ -8,6 +8,17 @@ import android.widget.ArrayAdapter
 import com.codigonline.curso_navigation.databinding.ItemProductoListViewBinding
 import com.codigonline.curso_navigation.models.Producto
 
+
+// listview es una view de android que nops permite crear un elemento tantas veces como sea necesario en forma de lista ,un elemento debajo  de otro
+// incluye una scrollbar automáticamente
+/*
+para crear  un Listview necesitamos 3 componentes:
+    Listaview - dentro del layout donde se va a mostrar
+    Adaptador - clase que rellena el list view item a item
+    Item Layout  - layout utilizaado con la estructura deseada (ejm  android.R.layout.simple_list_item_1  = es un layout preprogamado por android)
+    Los datos se envian al adaptador y de este a la lista
+ */
+
 class ListViewAdapter(context: Context, val vista: Int, val productos: List<Producto>)
     : ArrayAdapter<Producto>(context, vista, productos) {
 
@@ -17,7 +28,6 @@ class ListViewAdapter(context: Context, val vista: Int, val productos: List<Prod
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var view = convertView
-
         if (view == null) {
             view = LayoutInflater.from(context).inflate(vista, null)
         }
