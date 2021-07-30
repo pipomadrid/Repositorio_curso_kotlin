@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 
-class ProductoViewModel : ViewModel() {
+class rProductoViewModel : ViewModel() {
 
     /**
      * MutableLiveData<List<Producto>> productos = new MutableLiveData<>()
